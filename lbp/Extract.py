@@ -1,14 +1,10 @@
-# lbp_feature_extraction.py
 
 import numpy as np
-from color_conversions import rgb2hsv, rgb2ycbcr, rgb2yuv
-from lbp_methods import lbp_basic, lbp_uniform, lbp_rotation_invariant, lbp_multi_scale
+from Color import rgb2hsv, rgb2ycbcr, rgb2yuv
+from lbp import lbp_basic, lbp_uniform, lbp_rotation_invariant, lbp_multi_scale
 
 
 def convert_to_color_space(image, color_space):
-    """
-    Convert the image to the specified color space.
-    """
     if color_space == 'HSV':
         return rgb2hsv(image)
     elif color_space == 'YCbCr':

@@ -1,5 +1,5 @@
-import numpy as np
 
+import numpy as np
 
 class SVM_RBF:
     def __init__(self, learning_rate=0.01, regularization_strength=0.1, gamma=0.1, num_epochs=1000):

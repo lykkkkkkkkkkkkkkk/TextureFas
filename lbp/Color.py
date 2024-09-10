@@ -1,7 +1,8 @@
+
 import numpy as np
 
 def rgb2hsv(image):
-    image = image / 255.0  # Normalize to [0, 1]
+    image = image / 255.0
     R, G, B = image[..., 0], image[..., 1], image[..., 2]
     Cmax = np.max(image, axis=-1)
     Cmin = np.min(image, axis=-1)
@@ -19,7 +20,7 @@ def rgb2hsv(image):
     return hsv
 
 def rgb2ycbcr(image):
-    image = image / 255.0  # Normalize to [0, 1]
+    image = image / 255.0
     R, G, B = image[..., 0], image[..., 1], image[..., 2]
 
     Y = 0.299 * R + 0.587 * G + 0.114 * B
@@ -30,7 +31,7 @@ def rgb2ycbcr(image):
     return ycbcr
 
 def rgb2yuv(image):
-    image = image / 255.0  # Normalize to [0, 1]
+    image = image / 255.0
     R, G, B = image[..., 0], image[..., 1], image[..., 2]
 
     Y = 0.299 * R + 0.587 * G + 0.114 * B
